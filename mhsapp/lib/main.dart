@@ -6,15 +6,10 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-  appBar: AppBar(
-    backgroundColor: Colors.orange,
-    title: const Text('MHS App'),
-  ),
+      home: Scaffold( 
   bottomNavigationBar: BottomNavigationBar(
     items: const <BottomNavigationBarItem>[
       BottomNavigationBarItem(
@@ -31,8 +26,13 @@ class MyApp extends StatelessWidget {
       ),
     ],
   ),
-  )
+    body: const Center(
+      child: Text('Hello, John!', 
+      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 43))
+      )
+      )
     );
   }
-  
 }
+
+
