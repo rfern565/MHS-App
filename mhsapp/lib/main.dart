@@ -24,73 +24,96 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    body: Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Hello, Mia!',
-              style: TextStyle(
-                fontSize: 45,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Text(
+                'Hello, Mia!',
+                style: TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-            Text(
-              'What are you looking for?',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 32),
+              child: Text(
+                'What are you looking for?',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/mySchedule');
-              },
-              child: Text(' My Schedule '),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/mySchedule');
+                },
+                child: Text(
+                  ' My Schedule ',
+                  style: TextStyle(fontSize: 20),
+                ),
                 style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50.0),
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                  ),
+                  minimumSize: MaterialStateProperty.all<Size>(
+                    Size(200, 41),
                   ),
                 ),
-                minimumSize: MaterialStateProperty.all<Size>(
-                  Size(200, 41),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/myClubs');
+                },
+                child: Text(
+                  '    My Clubs    ',
+                  style: TextStyle(fontSize: 20),
+                ),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                  ),
+                  minimumSize: MaterialStateProperty.all<Size>(
+                    Size(200, 41),
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/myClubs');
-              },
-              child: Text('    My Clubs    '),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/browseClubs');
+                },
+                child: Text(
+                  'Browse Clubs',
+                  style: TextStyle(fontSize: 20),
+                ),
                 style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50.0),
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
                   ),
-                ),
-                minimumSize: MaterialStateProperty.all<Size>(
-                  Size(200, 41),
-                ),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/browseClubs');
-              },
-              child: Text('Browse Clubs'),
-                style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50.0),
+                  minimumSize: MaterialStateProperty.all<Size>(
+                    Size(200, 41),
                   ),
-                ),
-                minimumSize: MaterialStateProperty.all<Size>(
-                  Size(200, 41),
                 ),
               ),
             ),
@@ -100,6 +123,12 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
 
 class MySchedulePage extends StatelessWidget {
   @override
