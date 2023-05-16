@@ -9,30 +9,140 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold( 
-  bottomNavigationBar: BottomNavigationBar(
-    items: const <BottomNavigationBarItem>[
-      BottomNavigationBarItem(
-        icon: Icon(Icons.home),
-        label: 'Home',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.school),
-        label: 'Clubs',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.person),
-        label: 'Profile',
-      ),
-    ],
-  ),
-    body: const Center(
-      child: Text('Hello, John!', 
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 43))
-      )
-      )
+      
+      home: HomePage(),
+      routes: {
+        '/mySchedule': (context) => MySchedulePage(),
+        '/myClubs': (context) => MyClubsPage(),
+        '/browseClubs': (context) => BrowseClubsPage(),
+      },
     );
   }
 }
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+    body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Hello, Mia!',
+              style: TextStyle(
+                fontSize: 45,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'What are you looking for?',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/mySchedule');
+              },
+              child: Text(' My Schedule '),
+                style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                ),
+                minimumSize: MaterialStateProperty.all<Size>(
+                  Size(200, 41),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/myClubs');
+              },
+              child: Text('    My Clubs    '),
+                style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                ),
+                minimumSize: MaterialStateProperty.all<Size>(
+                  Size(200, 41),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/browseClubs');
+              },
+              child: Text('Browse Clubs'),
+                style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                ),
+                minimumSize: MaterialStateProperty.all<Size>(
+                  Size(200, 41),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MySchedulePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Schedule'),
+      ),
+      body: Center(
+        child: Text('My Schedule Page'),
+      ),
+    );
+  }
+}
+
+class MyClubsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Clubs'),
+      ),
+      body: Center(
+        child: Text('My Clubs Page'),
+      ),
+    );
+  }
+}
+
+class BrowseClubsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Browse Clubs'),
+      ),
+      body: Center(
+        child: Text('Browse Clubs Page'),
+      ),
+    );
+  }
+}
+
+
 
 
