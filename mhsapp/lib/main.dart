@@ -42,7 +42,6 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 32),
                   child: Text(
