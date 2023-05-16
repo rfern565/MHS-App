@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         '/mySchedule': (context) => MySchedulePage(),
         '/myClubs': (context) => MyClubsPage(),
         '/browseClubs': (context) => BrowseClubsPage(),
-        '/questions': (context) => questionsPage(),
+        '/questions': (context) => QuestionsPage(),
       },
     );
   }
@@ -190,7 +190,7 @@ class BrowseClubsPage extends StatelessWidget {
   }
 }
 
-class questionsPage extends StatelessWidget {
+class QuestionsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
