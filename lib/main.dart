@@ -9,14 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       home: HomePage(),
       routes: {
         '/mySchedule': (context) => MySchedulePage(),
         '/myClubs': (context) => MyClubsPage(),
         '/browseClubs': (context) => BrowseClubsPage(),
         '/questions': (context) => questionsPage(),
-
       },
     );
   }
@@ -58,12 +56,9 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/mySchedule');
                     },
-                    child: Text(
-                      ' My Schedule ',
-                      style: TextStyle(fontSize: 20),
-                    ),
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.black),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50.0),
@@ -72,6 +67,10 @@ class HomePage extends StatelessWidget {
                       minimumSize: MaterialStateProperty.all<Size>(
                         Size(200, 41),
                       ),
+                    ),
+                    child: Text(
+                      ' My Schedule ',
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ),
@@ -81,12 +80,9 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/myClubs');
                     },
-                    child: Text(
-                      '    My Clubs    ',
-                      style: TextStyle(fontSize: 20),
-                    ),
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.black),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50.0),
@@ -95,6 +91,10 @@ class HomePage extends StatelessWidget {
                       minimumSize: MaterialStateProperty.all<Size>(
                         Size(200, 41),
                       ),
+                    ),
+                    child: Text(
+                      '    My Clubs    ',
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ),
@@ -104,12 +104,9 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/browseClubs');
                     },
-                    child: Text(
-                      'Browse Clubs',
-                      style: TextStyle(fontSize: 20),
-                    ),
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.black),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50.0),
@@ -118,6 +115,10 @@ class HomePage extends StatelessWidget {
                       minimumSize: MaterialStateProperty.all<Size>(
                         Size(200, 41),
                       ),
+                    ),
+                    child: Text(
+                      'Browse Clubs',
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ),
@@ -143,13 +144,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
 
 class MySchedulePage extends StatelessWidget {
   @override
@@ -200,99 +194,92 @@ class questionsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
+      appBar: AppBar(
         title: Text('Frequently Asked Questions'),
         backgroundColor: Colors.black,
       ),
-      body: Stack(
-        children: [
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 4),
-                  child: Text(
-                    'How do I sign up for a Club or SLG?',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+      body: Stack(children: [
+        Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4),
+              child: Text(
+                'How do I sign up for a Club or SLG?',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
-                  child: Text(
-                    'Reach out to club leaders about joining their clubs through the contact buttons located on the bottom right of their club cards. Club cards are located in the browse clubs tab.',
-                    style: TextStyle(
-                      fontSize: 13,
-                    ),
-                  ),
-                ),
-                  Padding(
-                  padding: const EdgeInsets.only(bottom: 4),
-                  child: Text(
-                    'If I sign up for a Club or SLG am I comitting myself in anyway?',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                  Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
-                  child: Text(
-                    'No, unless communicated otherwise by the club leader who added you to the club you are not directly comitting yourself to direct action for the club in any way other than attendance at meetings.',
-                    style: TextStyle(
-                      fontSize: 13,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 4),
-                  child: Text(
-                    'Do I have to apply or audition to get into any clubs?',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                  Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
-                  child: Text(
-                    'No, unless communicated otherwise by the club leader who you contacted regarding joining the club, you will not have to apply or audition to join any clubs.',
-                    style: TextStyle(
-                      fontSize: 13,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 4),
-                  child: Text(
-                    'How many clubs or SLGs should I join?',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                  Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
-                  child: Text(
-                    'There is no direct limit on the number of clubs or SLGs you can join, so feel free to join as many as you are interested in participarting in. However, we would reccomend not overextending yourself by joining more than you have time for.',
-                    style: TextStyle(
-                      fontSize: 13,
-                    ),
-                  ),
-                )
-              ]
               ),
-           )
-        ]
-    ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Text(
+                'Reach out to club leaders about joining their clubs through the contact buttons located on the bottom right of their club cards. Club cards are located in the browse clubs tab.',
+                style: TextStyle(
+                  fontSize: 13,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4),
+              child: Text(
+                'If I sign up for a Club or SLG am I comitting myself in anyway?',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Text(
+                'No, unless communicated otherwise by the club leader who added you to the club you are not directly comitting yourself to direct action for the club in any way other than attendance at meetings.',
+                style: TextStyle(
+                  fontSize: 13,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4),
+              child: Text(
+                'Do I have to apply or audition to get into any clubs?',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Text(
+                'No, unless communicated otherwise by the club leader who you contacted regarding joining the club, you will not have to apply or audition to join any clubs.',
+                style: TextStyle(
+                  fontSize: 13,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4),
+              child: Text(
+                'How many clubs or SLGs should I join?',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Text(
+                'There is no direct limit on the number of clubs or SLGs you can join, so feel free to join as many as you are interested in participarting in. However, we would reccomend not overextending yourself by joining more than you have time for.',
+                style: TextStyle(
+                  fontSize: 13,
+                ),
+              ),
+            )
+          ]),
+        )
+      ]),
     );
   }
 }
-
-
