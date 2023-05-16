@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    'Hello, Mia!',
+                    'Hello Mia!',
                     style: TextStyle(
                       fontSize: 45,
                       fontWeight: FontWeight.bold,
