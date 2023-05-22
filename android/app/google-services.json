@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "431163444381",
+    "project_id": "mhs-app-471ea",
+    "storage_bucket": "mhs-app-471ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431163444381:android:ef719808d04cf943931874",
+        "android_client_info": {
+          "package_name": "com.example.mhsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431163444381-8saagggg7cffh2068rnjn7lpitq29pdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsOXOqZ_Zq4eHk7z3ADLdieEQ70dwWT08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431163444381-8saagggg7cffh2068rnjn7lpitq29pdl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "431163444381-bsf3ro2f2le5mrcge2f59dh9i85kunsc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mhsapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
